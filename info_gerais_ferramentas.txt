@@ -16,15 +16,17 @@ TFS
 GIT
 Mercurial
 
+2-Abrir o github desktop.
+Lembrar de configurar o github desktop, para poder sincronizar com o repositorio remoto;
+Eu abro p gothub desktop para: Clonar o meu repositorio, executar commits, executar push;
+
+3-sincronizar o github desktop;
+Clicar na opção "files", depois "clonar o repositório" e clonar o reposiório desejado.
+
+4-O clonar copia o repositorio desejado e traz para a maquina;
+
+5-Abrir o windows explore na pasta do meu repositorio local;
 
 
-1-logar no github
-2-abrir o github desktop
-3-sincronizar o desktop com o hub
-4-pedir para clonar o repositorio
-5-acessar o disco (c:)
-6-acessar a pasta Usuarios
-7-acessar a pasta ADM 
-8-acessar a pasta documentos
-9-acessar a pasta github
-10-acessar o arquivo desejado
+
+
