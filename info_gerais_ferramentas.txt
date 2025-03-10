@@ -1,0 +1,30 @@
+1-criar uma cont no githu.com
+2-permitir contribuiçao do prefessor no repositório remoto;
+3-configurar o github desktop para sincronizar no github.com
+
+
+*********************************************************************************
+1- logar o github;
+Eu logo no github.com, com o navegador da minha preferencia, APENAS quando eu quiser visualizar o conteudo esperado;
+Eu logo no github.com, com o aplicativo github desktop para sincronizar o github desktop com p github.co.;
+O github desktop é um software dew controle de versão, similar aos apontados abaixo:
+
+Microsoft
+CVS
+Subversion
+TFS
+GIT
+Mercurial
+
+
+
+1-logar no github
+2-abrir o github desktop
+3-sincronizar o desktop com o hub
+4-pedir para clonar o repositorio
+5-acessar o disco (c:)
+6-acessar a pasta Usuarios
+7-acessar a pasta ADM 
+8-acessar a pasta documentos
+9-acessar a pasta github
+10-acessar o arquivo desejado
