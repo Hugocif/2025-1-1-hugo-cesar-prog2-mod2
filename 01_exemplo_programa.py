@@ -20,7 +20,8 @@ evento    = {} #keys: titulo, capacidade, vagas_restantes
 aluno     = {} #keys: nome, curso, instituição
 matricula = {} #keys: evento_nome, evento_aluno
 
-eventos_cadastrados = [] #manipula evento
+
+67eventos_cadastrados = [] #manipula evento
 alunos_cadastrados  = [] #manipula aluno
 alunos_matriculados = [] #manipula inscrição de alunos em eventos já pré cadastrados
 
