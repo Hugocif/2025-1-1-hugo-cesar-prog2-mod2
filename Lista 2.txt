@@ -40,3 +40,6 @@ f)   L ou pot(B,A)<=C*10+A*B
      F ou 49<=49
      F ou V
      =V
+
+
+continua
