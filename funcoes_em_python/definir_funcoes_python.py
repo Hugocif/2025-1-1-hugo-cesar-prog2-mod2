@@ -3,8 +3,7 @@
 #1)Escrita ao contrário
 
 def PalavraEscolhida(PalavraVirar)
-    
-     
+
 for itemdalista in "Instituto Federal De Santa Catarina":
  print(itemdalista)
 
