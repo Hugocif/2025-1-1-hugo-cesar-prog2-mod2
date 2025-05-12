@@ -21,7 +21,7 @@ aluno     = {} #keys: nome, curso, instituição
 matricula = {} #keys: evento_nome, evento_aluno
 
 
-67eventos_cadastrados = [] #manipula evento
+ventos_cadastrados = [] #manipula evento
 alunos_cadastrados  = [] #manipula aluno
 alunos_matriculados = [] #manipula inscrição de alunos em eventos já pré cadastrados
 
