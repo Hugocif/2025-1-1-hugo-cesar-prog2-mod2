@@ -1,5 +1,6 @@
 from datetime import datetime
 from datetime import date
+from datetime import time
 
 
 """Pytz é uma biblioteca do Python que permite calcular fusos horários e
@@ -27,5 +28,10 @@ print("|Dia de hoje: ", dia_atualmente)"""
 
 #QUESTÃO 4:
 
-date.fromisocalendar("14:30:59")
+"""horario = time(14, 30, 50)
+
+print(horario.hour, ':', horario.minute, ':', horario.second)
+print('horario: ', horario.strftime('%H:$H:%S'))"""
+
+#QUESTÃO 5:
 
