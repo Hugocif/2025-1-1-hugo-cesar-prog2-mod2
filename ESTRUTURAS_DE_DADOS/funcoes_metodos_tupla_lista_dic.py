@@ -50,3 +50,27 @@ for i, v in enumerate(t7):
         
         media = sum(leitura) / len(leitura)
         print(f"media das leituras: {media:.2f}")
+        
+        #Métodos das listas em python: append, extend, insert, remove, pop, clear, index, count, sort, reverse, copy.
+        
+        d = {'a': 1, 'b': 2, 'c': 3}
+        d.clear()
+        print(d) #Saída
+        
+        d1 = {'a': 1, 'b': 2}
+        d2 = d1.copy()
+        print(d2) #Saída: {'a': 1, 'b': 2}
+        
+        keys = {'a', 'b', 'c'}
+        d3 = dict.fromkeys(keys, 0)
+        print(d3) 
+        
+        d4 = {'a': 1}
+        print(d.get('a'))
+        print(d.get('b', 0))
+        
+        d5 = {'a': 1, 'b': 2}
+        for k,v in d.itens():
+            print(k,v)
+            
+            d6 =
