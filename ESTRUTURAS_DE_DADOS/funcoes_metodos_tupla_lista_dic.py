@@ -73,4 +73,4 @@ for i, v in enumerate(t7):
         for k,v in d.itens():
             print(k,v)
             
-            d6 =
+            
