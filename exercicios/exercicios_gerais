@@ -1,0 +1,96 @@
+import time
+sintax = """Sintaxe é o conjunto de regras que definem como escrever um código de programação,
+de forma que o computador possa entender e executar as instruções. 
+_____________________________
+Sintaxe
+Regras que definem a estrutura e a forma de escrever instruções e programas
+Importância
+Fundamental para a construção de códigos e para a legibilidade do código
+______________________________
+Elementos
+Palavras-chave, operadores, pontuação, recuo, variáveis, estruturas de controle, funções
+______________________________
+Características
+Cada linguagem de programação tem sua própria sintaxe
+______________________________
+Ferramentas
+Existem ferramentas e editores de código que ajudam a verificar a sintaxe
+______________________________
+Erros
+Erros de sintaxe são um dos tipos mais comuns de erros que programadores enfrentam
+______________________________"""
+Semântica = """Semântica na programação é o estudo do significado de um trecho de código, ou seja, o que ele faz.
+É uma área da ciência da computação que complementa a sintaxe, que define a estrutura do código. 
+ __________________
+|    Semântica             |        Sintaxe        |
+|O que define              | A estrutura do código |
+|O significado do código   |                       |
+|_________|________|
+"""
+Laco_infinito = """Um laço infinito em programação é uma sequência de instruções que se repete infinitamente, sem que seja possível 
+atingir a condição de saída. É também conhecido como "repetição infinita".
+ 
+Causas:
+A variável de controle do laço não consegue atingir o último número. 
+O programador escreve uma condição que nunca será satisfeita. 
+O programador esquece de alterar o valor da variável de controle do laço.
+
+Como sair:
+Usar o comando "break" para forçar a saída quando uma determinada condição ocorrer.
+
+Exemplos de uso:
+No entanto, existem momentos onde isso é util como por exemplo esse codigo.
+"""
+Variável = """Na programação, uma variável é um espaço de memória que armazena valores que podem ser alterados durante a execução de um 
+programa. As variáveis são elementos fundamentais da programação, independentemente da linguagem utilizada. 
+                    Variável
+______________________________
+Definição
+Um item de dados nomeado que pode armazenar diferentes valores
+______________________________
+Função
+Armazenar e manipular valores durante a execução de um programa
+______________________________
+Onde está localizada
+Na memória física ou virtual do computador
+______________________________
+Como é identificada
+Por um nome descritivo ou identificador
+______________________________
+Como é utilizada
+Declarada e atribuída um valor
+______________________________
+"""
+while True:
+    
+    print("\n1-Como configurar a lingua do vscode\n2-O que é sintaxe\n3-O que é Semântica\n4-O que é laço infinito\n5-O que é Variavel\nSAIR\n")
+    
+    escolha_teorica = input("Escolha uma das opções acima: ")
+
+    escolha_teorica = (escolha_teorica.upper())
+    
+    if escolha_teorica == "1":
+        print("Você pode substituir o idioma da interface do usuário padrão definindo explicitamente o idioma de exibição do VS Code com o comando \"Configurar o Idioma de Exibição\". Pressione \"Ctrl+Shift+P\" para exibir a \"Paleta de Comandos\" e comece a digitar \"display\" para filtrar e exibir o comando \"Configurar o Idioma de Exibição\". Pressione \"Enter\" e será exibida uma lista de idiomas instalados por localidade, com a localidade atual realçada. Selecione outra \"localidade\" para mudar o idioma da interface do usuário. Visite Docs para mais informações.O plugin \"Portuguese (Brazil) Language Pack for Visual Studio Code - Microsoft\", precisa estar instalado.")
+        time.sleep(10)
+        
+    elif escolha_teorica == "2":
+        print(sintax)
+        time.sleep(10)
+        
+    elif escolha_teorica == "3":
+        print(Semântica)
+        time.sleep(10)
+        
+    elif escolha_teorica == "4":
+        print(Laco_infinito)
+        time.sleep(10)
+        
+    elif escolha_teorica == "5":
+        print(Variável)
+        time.sleep(10)
+        
+    if escolha_teorica == "SAIR":
+        break
+    
+    else:
+        print(f"\n\"{escolha_teorica}\" Não é uma opção valida se deseja sair escreva \"SAIR\"\n")
