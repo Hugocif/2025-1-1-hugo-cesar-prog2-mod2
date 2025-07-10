@@ -1,3 +1,7 @@
+from datetime import datetime as dt
+
+#instalar dateutil
+
 OPCAO_MANIPULAR_LISTA = 1
 OPCAO_MEDIA_DICIONARIO = 2
 OPCAO_CONTAGEM_DE_LETRAS = 3
@@ -62,6 +66,50 @@ def addnewitem(lista, indice, item_new):
         lista[indice] = item_new
     except Exception as listError:
         print(f"Erro ao incluir item lista: {listError} ")
+        
+def mediaNotas(listaDeNotas):
+    media = {}
+    if len(listaDeNotas) > 0:
+        for nome, lista_notas in listaDeNotas.items():
+            media[nome] = sum(lista_notas) / len(lista_notas)
+            
+        return media
+    else:
+        return 0 
+    
+def contarLetras(ListaString):
+    contador = {}
+    
+    for palavra in ListaString:
+        for letra in palavra:
+            if letra.isalpha():
+                contador[letra] = contador.get(letra, 0) + 1
+    return contador
+
+def dateFromString(stringDate, datestringFormat):
+    try:
+        date_obj = dt.strptime(stringDate, datestringFormat).date()
+        
+        return date_obj
+        
+    except Exception as e:
+        print(f"Erro na criçaão da data: {e}")
+        return None
+    
+def subtracaodeDatas(dataInicial, dataFinal):
+    try:
+        dias: 0
+        if dataInicial > dataFinal:
+            dias = dataInicial - dataFinal
+            
+        else:
+            dias = dataFinal - dataInicial
+            
+        return dias.days
+        
+    except Exception as e:
+        print(f"Erro na operação de subtração de datas: {e}")
+        return None
 
 #Q1 - PROGRAMA PRINCIPAL 
 
@@ -161,12 +209,18 @@ while not UsuarioNaoDigitouSair:
 
                 break
 
-
         elif int(opcaoDigitadaPeloUsuario)== OPCAO_MEDIA_DICIONARIO:
-            print()
-
+            
+            media = mediaNotas(alunos_notas)
+            
+            if len(media) > 0:
+                print(f"Média aluno-Nota: {media} \n")
+                
+            else:
+                print("Erro no calculo da mewdia. lista de alunos-notas vazia ou invalidas!")
+ 
         elif int(opcaoDigitadaPeloUsuario) == OPCAO_CONTAGEM_DE_LETRAS:
-            print()
+            print(contarLetras(["Primavera", "Verão", "Outono", "Inverno"]))
 
         elif int(opcaoDigitadaPeloUsuario) == OPCAO_MANIPULAR_DATAS:
             print()
