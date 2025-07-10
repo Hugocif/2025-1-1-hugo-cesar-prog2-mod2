@@ -18,6 +18,8 @@ MENU_OPCAO_USAR_TUPLAS = "5 - Usando Tuplas"
 
 LINGUAGENS_PROGRAMACAO = ["Python", "JavaScript", "Java", "C++", "C#", "PHP", "TypeScript", "Kotlin", "Swift", "Ruby"]
 
+DISCIPLINAS_TDS = ("Geografia", "História", "Educação Física", "Filosofia", "Matemática", )
+
 ADICIONAR_ITEM = 1
 REMOVER_ITEM = 2
 ATUALIZAR_ITEM = 3
@@ -110,6 +112,14 @@ def subtracaodeDatas(dataInicial, dataFinal):
     except Exception as e:
         print(f"Erro na operação de subtração de datas: {e}")
         return None
+
+def elementoTupla(disciplinas, indiceElemento):
+    try:
+        return disciplinas[indiceElemento]
+        
+    except Exception as e:
+        print(f"Erro no acesso a um dos elementos da tupla: {e}")
+        returnNone
 
 #Q1 - PROGRAMA PRINCIPAL 
 
@@ -223,10 +233,47 @@ while not UsuarioNaoDigitouSair:
             print(contarLetras(["Primavera", "Verão", "Outono", "Inverno"]))
 
         elif int(opcaoDigitadaPeloUsuario) == OPCAO_MANIPULAR_DATAS:
-            print()
-
+            strDtinicial = input("Dighite uma data inicial no formato dd/mm/aaaa: ")
+            
+            strDtfinal = input("Dighite uma data inicial no formato dd/mm/aaaa: ")
+            
+            dataInicial_obj = dateFromString(strDtinicial, "%d/%m/%Y")
+            dataFinal_obj = dateFromString(strDtfinal, "%d/%m/%Y")
+            
+            if dataInicial_obj == None:
+                print(f"A data \"{strDtinicial}\" não é válida.")
+                
+            elif dataFinal_obj == None:
+                 print(f"A data \"{strDtfinal}\" não é válida.")
+                 
+            else:
+                numeroDias = subtracaodeDatas(dataInicial_obj, dataFinal_obj)
+                
+                if numeroDias == None:
+                    print(f"Nao foi  possivel fazer a diferença {strDtfinal} - {strDtinicial}")  
+                    
+                else:
+                    print(f"\nA diferença {strDtfinal} - {strDtinicial} é de {numeroDias} dias(s).")                
+                                  
         elif int(opcaoDigitadaPeloUsuario) == OPCAO_USAR_TUPLAS:
-            print()
+            try:
+                indice = int(input("Digite um indice. 0 a 9, para consultar uma das disciplinas do TDS"))
+                
+                if indice > 0 and indice < len(DISCIPLINAS_TDS):
+                    
+                    disciplina = elementoTupla(DISCIPLINAS_TDS, indice)
+                    
+                    if disciplina == None:
+                        print("\nErro na consulta da disciplina TDS\n.")
+                        
+                    else:
+                        print(f"\n|Disciplina TDS: {disciplina}\n")
+                        
+                else:
+                    print(f"\nO indice \"{indice}\" é invalido\n")
+                
+            except ValueError as e:
+                print(f"O indice \"{indice}\"é invalido. Erro: {e}")
 
         else:
             print("")
